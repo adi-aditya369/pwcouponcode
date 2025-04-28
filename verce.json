@@ -2,14 +2,12 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
+      "src": "next.config.js",
       "use": "@vercel/next"
     }
   ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/"
-    }
-  ]
+  "framework": "nextjs",
+  "buildCommand": "pnpm install && pnpm run build",
+  "installCommand": "pnpm install",
+  "outputDirectory": ".next"
 }
